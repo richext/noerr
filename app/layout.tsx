@@ -52,14 +52,6 @@ export default function RootLayout({
       </head>
       <body className="bg-primary text-white">
         {children}
-        {/* Hidden Netlify form at root for build-time detection */}
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="text" name="company" />
-          <input type="email" name="email" />
-          <input type="tel" name="phone" />
-          <textarea name="message" />
-        </form>
         <Script
           id="schema-org"
           type="application/ld+json"
