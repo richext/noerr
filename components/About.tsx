@@ -62,7 +62,7 @@ const coreValues = [
 const differentiators = [
   {
     title: 'Tech-Enabled Services',
-    description: 'Our proprietary technology platform powers every aspect of our operations',
+    description: 'We connect with all major technology providers to power every aspect of our operations',
     icon: '/icons/tech-platform.svg',
     iconFallback: '⚙️'
   },
@@ -176,7 +176,7 @@ export default function About() {
             <div className="space-y-4 text-gray-300 type-body">
               <p>
                 While we honor our traditions, we're firmly focused on the future. Today's Noerr combines 
-                time-tested logistics expertise with proprietary technology to deliver solutions that modern 
+                time-tested logistics expertise with integrated technology partnerships to deliver solutions that modern 
                 brands demand in a rapidly evolving marketplace.
               </p>
               <p>

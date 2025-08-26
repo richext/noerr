@@ -30,17 +30,19 @@ export default function Home() {
         stagger: 0.15
       });
 
-      // Parallax effect for the hero section
-      gsap.to('.parallax-bg', {
-        scrollTrigger: {
-          trigger: '.hero-section',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
-        },
-        y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-        ease: 'none'
-      });
+      // Video parallax effect
+      if (videoRef.current) {
+        gsap.to(videoRef.current, {
+          scrollTrigger: {
+            trigger: heroRef.current,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+          },
+          y: '20%',
+          ease: 'none'
+        });
+      }
       
       // Scroll indicator animation
       gsap.to('.scroll-indicator', {
@@ -93,8 +95,8 @@ export default function Home() {
       <div ref={heroRef} className="hero-section min-h-[100svh] relative overflow-hidden bg-primary">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          {/* Gradient overlay for strong readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary/95 z-10" />
+          {/* Gradient overlay for readability - lighter to show content */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/50 to-primary/80 z-10" />
           
           {/* Video */}
           <video 
