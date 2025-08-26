@@ -13,3 +13,9 @@
 
 [functions]
   included_files = ["public/**/*"]
+
+# Enable Next.js Runtime v5 forms support
+[plugins.inputs]
+  # Required when using HTML forms in /app with the Next.js Runtime v5
+  # See https://ntl.fyi/next-runtime-forms-migration
+  is_using_next_forms = true
