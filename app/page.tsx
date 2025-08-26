@@ -95,8 +95,8 @@ export default function Home() {
       <div ref={heroRef} className="hero-section min-h-[100svh] relative overflow-hidden bg-primary">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          {/* Gradient overlay for readability - lighter to show content */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/50 to-primary/80 z-10" />
+          {/* Gradient overlay for readability - darker on mobile for better text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90 sm:from-primary/60 sm:via-primary/50 sm:to-primary/80 z-10" />
           
           {/* Video */}
           <video 
@@ -119,7 +119,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-5xl mx-auto text-center"
           >
-            <h1 className="hero-text type-h1 text-white mb-6 md:mb-8">
+            <h1 className="hero-text type-h1 text-white mb-6 md:mb-8 px-4">
               Trusted 3PL for Transportation, Warehousing, and Distribution
             </h1>
             <p className="hero-text type-subhead mb-8 md:mb-12 max-w-3xl mx-auto px-4">
@@ -127,18 +127,18 @@ export default function Home() {
             </p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 px-4"
+              className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 px-4 w-full max-w-xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <a href="#contact" className="btn-primary transform hover:scale-105 flex items-center gap-2 group">
+              <a href="#contact" className="btn-primary transform hover:scale-105 flex items-center justify-center gap-2 group w-full sm:w-auto">
                 <span>Get a Quote</span>
                 <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
-              <a href="tel:+17172420566" className="btn-outline transform hover:scale-105 flex items-center gap-2">
+              <a href="tel:+17172420566" className="btn-outline transform hover:scale-105 flex items-center justify-center gap-2 w-full sm:w-auto">
                 <span>Call Dispatch</span>
                 <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -151,13 +151,13 @@ export default function Home() {
           
           {/* Scroll indicator */}
           <motion.div 
-            className="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+            className="scroll-indicator absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ delay: 2 }}
           >
-            <span className="text-white/70 text-sm mb-2">Scroll to explore</span>
-            <svg className="w-6 h-6 text-white/70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <span className="text-white/70 text-xs sm:text-sm mb-2">Scroll to explore</span>
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white/70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </motion.div>

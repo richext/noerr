@@ -103,7 +103,7 @@ export default function Technology() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="text-accent font-medium text-sm">PROPRIETARY TECHNOLOGY</span>
+            <span className="text-accent font-medium text-sm">TECHNOLOGY INTEGRATIONS</span>
           </motion.div>
           
           <motion.h2 
