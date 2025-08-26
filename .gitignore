@@ -17,3 +17,6 @@ coverage/
 **/*.crt
 **/*.key
 
+
+# Local Netlify folder
+.netlify
