@@ -168,13 +168,13 @@ export default function Contact() {
                   <div className="bg-white/5 rounded-xl p-6 space-y-4">
                     <h4 className="text-white font-medium text-lg">Or email us</h4>
                     <a 
-                      href={`mailto:contact@noerr-inc.com?subject=${encodeURIComponent(`Inquiry: ${inquiryTypes.find(t => t.id === selectedInquiry)?.label}`)}`}
+                      href={`mailto:dispatch@noerr-inc.com?subject=${encodeURIComponent(`Inquiry: ${inquiryTypes.find(t => t.id === selectedInquiry)?.label}`)}`}
                       className="inline-flex items-center gap-3 text-accent hover:text-accent-light transition-colors"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                       </svg>
-                      contact@noerr-inc.com
+                      dispatch@noerr-inc.com
                     </a>
                     <p className="text-gray-400 text-sm">We'll respond within 24 hours</p>
                   </div>
