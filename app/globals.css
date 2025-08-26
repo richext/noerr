@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.smooth-scroll {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FF94;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00CC78;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-accent-dark to-accent;
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Updated: Global sophisticated typography scale and utilities */
+.type-display {
+  @apply font-display tracking-tight leading-[1.05];
+  letter-spacing: -0.02em;
+}
+.type-h1 { @apply type-display text-5xl sm:text-6xl md:text-7xl; }
+.type-h2 { @apply type-display text-3xl sm:text-4xl md:text-5xl; }
+.type-h3 { @apply type-display text-2xl sm:text-3xl; }
+.type-subhead { @apply text-lg sm:text-xl md:text-2xl text-gray-200/95 leading-relaxed; }
+.type-body { @apply text-base sm:text-lg text-gray-300 leading-7; }
+.type-eyebrow { @apply uppercase tracking-widest text-accent/90 text-xs sm:text-sm font-medium; }
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-7 py-4 sm:px-9 sm:py-5 rounded-lg font-semibold transition-all duration-300 shadow-lg;
+  @apply bg-accent text-primary hover:bg-accent-dark;
+}
+.btn-outline {
+  @apply inline-flex items-center gap-2 px-7 py-4 sm:px-9 sm:py-5 rounded-lg font-semibold transition-all duration-300 border-2;
+  @apply border-white/30 text-white hover:bg-white/10;
+}
