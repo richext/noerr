@@ -9,7 +9,7 @@ const clashDisplay = Inter_Tight({ subsets: ['latin'], variable: '--font-clash-d
 export const metadata = {
   metadataBase: new URL('https://noerr-inc.com'),
   title: {
-    default: 'Noerr Inc. — Tech-Enabled 3PL',
+    default: 'Noerr Inc. — Advanced 3PL Solutions (v2)',
     template: '%s | Noerr Inc.'
   },
   description: 'Ecommerce fulfillment, B2B distribution, value-added services, trucking & transportation, and warehouse management for modern brands.',

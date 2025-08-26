@@ -122,6 +122,7 @@ export default function Home() {
             <h1 className="hero-text type-h1 text-white mb-6 md:mb-8 px-4">
               Trusted 3PL for Transportation, Warehousing, and Distribution
             </h1>
+            {/* Build verification: ${new Date().toISOString()} */}
             <p className="hero-text type-subhead mb-8 md:mb-12 max-w-3xl mx-auto px-4">
               Nearly a century of family-owned trucking heritage delivering reliable regional service across Pennsylvania and the Northeast.
             </p>
